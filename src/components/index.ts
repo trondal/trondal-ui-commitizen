@@ -1,2 +1,4 @@
-export * from './Profile/Profile';
-export * from './Banner/Banner';
+import { Profile } from "./Profile/Profile";
+import { Banner } from "./Banner/Banner";
+
+export { Profile, Banner }
