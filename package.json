@@ -3,16 +3,16 @@
   "version": "0.0.0-development",
   "author": "Trond Albinussen",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
   "engines": {
     "node": ">=18"
   },
   "scripts": {
+    "parcel:build": "parcel build",
+    "parcel:watch": "parcel build",
     "start": "tsdx watch",
     "build": "tsdx build",
     "commit": "git-cz",
@@ -23,7 +23,6 @@
     "analyze": "size-limit --why",
     "semantic-release": "semantic-release --branches main"
   },
-  "module": "dist/trondal-ui.esm.js",
   "size-limit": [
     {
       "path": "dist/trondal-ui.cjs.production.min.js",
@@ -39,10 +38,13 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "^2.8.3",
+    "@parcel/transformer-typescript-types": "^2.8.3",
     "@size-limit/preset-small-lib": "^8.2.4",
     "@types/react": "^17.0.53",
     "@types/react-dom": "^17.0.19",
     "cz-conventional-changelog": "^3.3.0",
+    "parcel": "^2.8.3",
     "prettier": "2.8.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
